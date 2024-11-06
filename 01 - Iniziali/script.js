@@ -5,14 +5,18 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Giovanni", "Alessandra"];
 
 // Dichiara la funzione qui.
 function inizialeNome(namesArray) {
-    return namesArray.map(name => name[0]); 
+    const iniziali = [];
+    for (let i = 0; i < namesArray.length; i++) {
+        iniziali.push(namesArray[i][0]);
+    }
+    return iniziali;
 }
 
 
 // Invoca la funzione qui e stampa il risultato in console
-const iniziale = inizialeNome(names);
-console.log(iniziale);
+console.log(inizialeNome(names));
 
 
 
 //Risultato atteso: ["A", "L", "M", "A", "G", "A"]
+

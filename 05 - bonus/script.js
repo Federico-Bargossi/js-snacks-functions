@@ -9,25 +9,23 @@ const name = 'Mario';
 
 
 // Dichiara la funzione qui.
-const getCurrentTime = () => {
+const getCurrentTime = (nome) => {
     const now = new Date();
     const orario = now.getHours();
     let message = 'Buona sera';
     if (orario < 13 && orario > 0){
-        message = 'Buongiorno';
+        message = `Buongiorno`;
     }else if (orario >= 13 && orario <= 17){
         message = 'Buon pomeriggio';
     }
-    return message;
+    return  `${message} ${nome}`;
 }
-
-const saluto = (nome) =>(`${nome}`);
 
 
 
 // Invoca la funzione qui e stampa il risultato in console
-const salutare = saluto(name);
-const messaggio = getCurrentTime();
-console.log(`${messaggio} ${salutare}`)
+
+const messaggio = getCurrentTime(name);
+console.log(messaggio)
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.

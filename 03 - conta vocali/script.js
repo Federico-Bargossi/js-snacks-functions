@@ -6,18 +6,18 @@ const word = 'javascript';
 // Dichiara la funzione qui.
 const contaVocali = (word) => {
     const vocali = ['a', 'e', 'i', 'o', 'u'];
-    return word
-        .toLowerCase()
-        .split('')
-        .filter(char => vocali.includes(char))
-        .length;
-};
-
-
+    let count = 0;
+    for (let i = 0; i < word.length; i++) {
+        if (vocali.includes(word[i].toLowerCase())) {
+            count++;
+        }
+    }
+    return count;
+}
 
 // Invoca la funzione qui e stampa il risultato in console
 const conta = contaVocali(word);
-console.log(conta);
+console.log(contaVocali(word));
 
 
 
